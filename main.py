@@ -28,7 +28,7 @@ async def get_model(model_name: ModelName):
 
     return {"model_name": model_name, "message": "Have some residuals"}
 
-@app.get("/FastApiPractice/{file_path:path}")
+@app.get("/{file_path:path}")
 async def read_file(file_path: str):
     file = open("./" + file_path)
     file_contents = file.read()
